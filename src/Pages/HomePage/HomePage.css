@@ -1,0 +1,52 @@
+.home-page{
+    width: 100%;
+}
+
+.home-page-top{
+    width: 100%;
+    padding: 2.5rem 0;
+    box-sizing: border-box;
+    display: flex;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.home-page-small-heading{
+    font-size: 1.55rem;    
+}
+
+.home-page-large-heading{
+    font-size: 2.6rem;
+    font-weight: bold;    
+}
+
+.home-page-medium-heading{
+    font-size: 1.9rem;
+    font-weight: bold;    
+}
+
+.carousel{
+    width: 100%;
+    height: 22rem;
+    background: #ddd;
+    border-radius: 2rem;
+}
+
+.add-margin{
+    margin: 2rem 0;
+}
+
+.set{
+    height: 22rem;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.notification-btn{
+    background-color: aquamarine;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+}

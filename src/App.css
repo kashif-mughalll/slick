@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  outline: none;
+  font-family: Poppins;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex2{
+  display: flex;
+  align-items: center; 
 }
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  background-color: #F5F8FC;
+  grid-template-columns: 25.6rem 1fr;
+}
+
+.container2{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 4rem;
+  overflow-y: scroll;
+}
+
+.side-bar{
+  width: 25.6rem;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 13rem 1fr 26rem;
+  background-color: white;    
+}
+
+.main-logo{
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1.2rem;
+  background-color: #8A8FA1;
+  border-radius: 50%;
+}
+
+.main-heading-style{
+  font-size: 3.4rem;
+  font-family: Poppins;
+  font-weight: bolder;
+}
+
+.side-bar-btn-style-p{
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0px;
+  color: #8A8FA1;
+  background: transparent;
+}
+
+.side-bar-btn-style{
+  height: 4.8rem;
+  width: 22.4rem;
+  justify-content: flex-start;
+}
+
+.side-bar-img-style{
+  margin: 0 1.6rem;
+  margin-right: 1.4rem;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+
+.btns-container{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+
+.side-bar-bottom-box{
+  width: 22.4rem;
+  height: 20.1rem;
+  /* border: 1px solid #438AEC; */
+  /* border-radius: 1rem; */
+  background: url('./Assets/icons/ProBox.svg');
+  background-position: center;
+  background-size: 100% 100%;
+}
+
