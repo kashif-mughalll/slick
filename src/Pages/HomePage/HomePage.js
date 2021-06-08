@@ -1,6 +1,7 @@
 import './HomePage.css'
 import React from 'react'
 import ProductsContainer from '../../Components/ProductsContainer/ProductsContainer'
+import NotificationBtn from '../../Components/NotificationBtn/NotificationBtn'
 
 var HomePage = ()=> {
     return (
@@ -10,11 +11,7 @@ var HomePage = ()=> {
                     <p className="home-page-small-heading">Hey Awesome.</p>
                     <p className="home-page-large-heading">Welcome Back...</p>
                 </div>
-                <div className="flex">
-                    <div className="notification-btn">
-
-                    </div>
-                </div>
+                <NotificationBtn/>
             </div>
 
             <div className="carousel">

@@ -4,6 +4,7 @@
   margin: 0;
   outline: none;
   font-family: Poppins;
+  text-decoration: none;
 }
 
 html{
@@ -52,10 +53,9 @@ html{
 }
 
 .main-logo{
-  height: 4rem;
-  width: 4rem;
-  margin-right: 1.2rem;
-  background-color: #8A8FA1;
+  height: 4.5rem;
+  width: 4.5rem;
+  margin-right: 1rem;
   border-radius: 50%;
 }
 
@@ -76,7 +76,24 @@ html{
   height: 4.8rem;
   width: 22.4rem;
   justify-content: flex-start;
+  transition: all 0.25s;
 }
+
+.side-bar-btn-style:hover{
+  background-color: #eee;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.side-bar-btn-style:hover .side-bar-btn-style-p{
+  font-weight: 500;
+  color: #6F8AE8;
+}
+
+
+
+
 
 .side-bar-img-style{
   margin: 0 1.6rem;

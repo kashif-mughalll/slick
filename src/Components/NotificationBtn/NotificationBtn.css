@@ -1,0 +1,21 @@
+
+.notification-btn{
+    height: 5rem;
+    width: 5rem;
+    background-color: #6F8AE8;
+    border-radius: 0.5rem;
+}
+
+.notification-btn:hover{
+    cursor: pointer;
+}
+
+.notification-btn:hover .notification-bell{
+    transform: rotate(15deg);
+}
+
+.notification-bell{
+    height: 3rem;
+    width: 3rem;
+    transition: all 0.3s;
+}

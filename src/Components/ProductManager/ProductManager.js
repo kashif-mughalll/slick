@@ -1,9 +1,19 @@
 import React from 'react'
+import Product from '../Product/Product'
+import Watch from '../../Assets/watch.jpg'
 
-function ProductManager() {
+var ProductManager = (props)=> {
     return (
         <div>
-            products
+    
+            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
+            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
+            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
+
+            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
+            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
+            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
+
         </div>
     )
 }
