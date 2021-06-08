@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Route, Switch, withRouter } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import './Manager.css'
 import BannerManager from '../BannerManager/BannerManager'
 import ProductManager from '../ProductManager/ProductManager'
@@ -15,9 +15,11 @@ var Manager = (props)=> {
                 </div>
                 <button className="manager-top-add-btn">+ Add New</button>
             </div>
-            <div className="manager-bottom">
-                
-                <BannerManager/>
+            <div className="manager-bottom">                
+                <Switch>
+                    <Route default path="/management/managebanners" component={BannerManager} />
+                    <Route path="/management/manageproducts" component={ProductManager} />
+                </Switch>                
             </div>
         </div>
     )

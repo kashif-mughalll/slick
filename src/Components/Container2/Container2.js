@@ -9,7 +9,7 @@ var Container2 = ()=> {
         <div className="container2">
             <Switch>
                 <Route exact path="/" component={HomePage} />
-                <Route exact path="/management" component={ManagementPage} />
+                <Route path="/management" component={ManagementPage} />
                 <Route component={Error} />
             </Switch>
         </div>

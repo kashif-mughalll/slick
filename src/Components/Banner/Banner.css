@@ -3,4 +3,57 @@
     width: 100%;
     box-sizing: border-box;
     display: grid;
+    grid-template-columns: 11rem 2rem 1fr 2rem 4rem 1rem 4rem;
+    margin: 1rem 0;
+}
+
+.banner-image{
+    width: 100%;
+    background-color: #aaa;
+}
+
+.banner-image-container{
+    width: 100%;
+    height: 7rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.divv{
+    overflow: hidden;
+}
+
+.banner-link-area{
+    /* max-width: 10rem; */
+    width: 100%;
+    background-color: #F8F9FC;
+    height: 4.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+}
+
+.banner-div-33{
+    width: 4.5rem;
+    height: 100%;
+}
+
+.banner-link-icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.banner-link-style{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.banner-btn-style{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
 }
