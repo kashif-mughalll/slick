@@ -1,20 +1,25 @@
 import React from 'react'
 import ProductCard from '../ProductCard/ProductCard'
 import './ProductContainer.css'
-import Image from '../../Assets/11.jpg'
+import { connect } from 'react-redux'
 
-var ProductsContainer = (props)=> {
+var ProductsContainer = ({products})=> {
     return (
         <div className="product-card-container">
-            <ProductCard amount="121212" category="casual" title="product" image={Image} id="1212" />
-            <ProductCard amount="121212" category="casual" title="product" image={Image} id="1212" />
-            <ProductCard amount="121212" category="casual" title="product" image={Image} id="1212" />
-            <ProductCard amount="121212" category="casual" title="product" image={Image} id="1212" />
-            <ProductCard amount="121212" category="casual" title="product" image={Image} id="1212" />
-            <ProductCard amount="121212" category="casual" title="product" image={Image} id="1212" />           
-            
+            {
+                products.map(element => (
+                    <ProductCard key={element._id} id={element._id} productImage={element.image} category={element.category.name} 
+                    productName={element.name} amount={element.price} categoryID={element.category._id} />
+                ))
+            }
         </div>
     )
 }
 
-export default ProductsContainer
+var mapState = (state)=> {
+    return {
+        products : state.products
+    }
+}
+
+export default connect(mapState)(ProductsContainer)

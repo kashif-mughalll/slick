@@ -3,8 +3,21 @@ import './Product.css'
 import Coin from '../../Assets/icons/Coin.svg'
 import EditIcon from '../../Assets/icons/Edit.svg'
 import DeleteIcon from '../../Assets/icons/Delete.svg'
+import { connect } from 'react-redux'
+import {ShowModal} from '../../Redux/Modal/ModalActions'
+import EditProductModal from '../../Modal/EditProductModal/EditProductModal'
+import DeleteModal from '../../Modal/DeleteProductModal/DeleteProductModal'
 
-var Product = ({productImage,category,productName,amount})=> {
+var Product = ({productImage,category,productName,amount,_id,categoryID,ShowModal})=> {
+    let product = {
+        image : productImage,
+        name : productName,
+        price : amount,
+        _id : _id,
+        category : category,
+        categoryID
+    }
+    
     return (
         <div className="product-container">
             <div className="product-image-container flex"> 
@@ -31,15 +44,19 @@ var Product = ({productImage,category,productName,amount})=> {
             <div></div>
 
             <div className="product-center-div"> 
-                <img className="product-btn-style" src={EditIcon} alt=""/> 
+                <img onClick={()=> ShowModal(EditProductModal,product)} className="product-btn-style" src={EditIcon} alt=""/> 
             </div>
             <div></div>
 
             <div className="product-center-div"> 
-                <img className="product-btn-style" src={DeleteIcon} alt=""/> 
+                <img className="product-btn-style" src={DeleteIcon} alt="" onClick={()=> ShowModal(DeleteModal,product._id)} /> 
             </div>
         </div>
     )
 }
 
-export default Product
+var actions = {
+    ShowModal,
+}
+
+export default connect(null,actions)(Product)

@@ -25,6 +25,10 @@
     align-items: center;
 }
 
+.product-center-div:hover{
+    cursor: pointer;
+}
+
 .product-category-stylee{
     white-space: nowrap;
     text-overflow: ellipsis;

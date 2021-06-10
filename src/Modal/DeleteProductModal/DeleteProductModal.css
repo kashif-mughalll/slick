@@ -1,0 +1,32 @@
+
+
+.delete-modal{
+    background-color: white;
+    width: 42rem;
+    height: 20rem;
+    border-radius: 2rem;
+}
+
+.delete-modal-para{
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+
+.delete-modal-btns{
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 400;
+    margin: 2rem 1rem;
+    background-color: #6F8AE8;
+}
+
+.delete-modal-btns:hover{
+    cursor: pointer;
+}
+
+.delete-modal-btns-2{
+    background-color: rgb(175, 70, 70);
+}

@@ -1,21 +1,24 @@
 import React from 'react'
 import Product from '../Product/Product'
-import Watch from '../../Assets/watch.jpg'
+import { connect } from 'react-redux'
 
-var ProductManager = (props)=> {
+var ProductManager = ({products})=> {
     return (
-        <div>
-    
-            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
-            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
-            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
-
-            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
-            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
-            <Product productImage={Watch} category="Casual" productName="Black shirt" amount="2285" />
-
+        <div>    
+            {
+                products.map(element => (
+                    <Product key={element._id} _id={element._id} productImage={element.image} category={element.category.name} 
+                        productName={element.name} amount={element.price} categoryID={element.category._id} />
+                ))
+            }
         </div>
     )
 }
 
-export default ProductManager
+var mapState = (state)=> {
+    return{
+        products : state.products
+    }
+}
+
+export default connect(mapState)(ProductManager)
