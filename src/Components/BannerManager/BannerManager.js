@@ -1,19 +1,19 @@
 import React from 'react'
 import Banner from '../Banner/Banner'
-import image from '../../Assets/11.jpg'
+import { connect } from 'react-redux'
 
-function BannerManager() {
+var BannerManager = ({banners})=> {
     return (
-        <div>
-            <Banner bannerImage={image} link="blabla"/>
-            <Banner bannerImage={image} link="blabla"/>
-            <Banner bannerImage={image} link="blabla"/>
-            <Banner bannerImage={image} link="blabla"/>
-            <Banner bannerImage={image} link="blabla"/>
-            <Banner bannerImage={image} link="blabla"/>
-            <Banner bannerImage={image} link="blabla"/>
+        <div>            
+            {
+                banners.map(banner => (
+                    <Banner key={banner._id} link={banner.link} _id={banner._id} />
+                ))
+            }
         </div>
     )
 }
 
-export default BannerManager
+var mapState = state => ({banners : state.banners})
+
+export default connect(mapState)(BannerManager)

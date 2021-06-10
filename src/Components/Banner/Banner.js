@@ -3,13 +3,17 @@ import './Banner.css'
 import LinkIcon from '../../Assets/icons/Link.svg'
 import EditIcon from '../../Assets/icons/Edit.svg'
 import DeleteIcon from '../../Assets/icons/Delete.svg'
+import {ShowModal} from '../../Redux/Modal/ModalActions'
+import { connect } from 'react-redux'
+import EditBannerModal from '../../Modal/EditBanner/EditBannerModal'
+import DeleteBannerModal from '../../Modal/DeleteBannerModal/DeleteBannerModal'
 
-var Banner = ({bannerImage,link})=> {
+var Banner = ({_id,link,ShowModal})=> {
     return (
     <div className="flex">
         <div className="banner">
             <div className="banner-image-container flex">
-                <img className="banner-image" src={bannerImage} alt=""/>
+                <img className="banner-image" src={link} alt=""/>
             </div>
             <div></div>
             <div className="flex divv">
@@ -21,12 +25,16 @@ var Banner = ({bannerImage,link})=> {
                 </div>
             </div>
             <div></div>
-            <div className="flex"> <img className="banner-btn-style" src={EditIcon} alt=""/> </div>
+            <div className="flex"> <img className="banner-btn-style" src={EditIcon} alt="" onClick={()=> ShowModal(EditBannerModal,{_id,link})} /> </div>
             <div></div>
-            <div className="flex"> <img className="banner-btn-style" src={DeleteIcon} alt=""/> </div>
+            <div className="flex"> <img className="banner-btn-style" src={DeleteIcon} alt="" onClick={()=> ShowModal(DeleteBannerModal,_id) } /> </div>
         </div>
     </div>
     )
 }
 
-export default Banner
+var actions = {
+    ShowModal
+}
+
+export default connect(null,actions)(Banner)

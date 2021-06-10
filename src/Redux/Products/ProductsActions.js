@@ -41,7 +41,7 @@ export var RemoveProduct = (_id) => async (dispatch,getState) => {
 export var SetProducts = () => async (dispatch) => {
     try {
         console.log("Fetch all products from server")
-        var products = (await axios.get("https://internship-slick-api.herokuapp.com/api/products"))
+        var products = await axios.get("https://internship-slick-api.herokuapp.com/api/products")
         dispatch({
             type: 'SET_PRODUCTS',
             payload : products.data.data

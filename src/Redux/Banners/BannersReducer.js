@@ -1,16 +1,16 @@
 var initialState = [];
 
-var ProductsReducer = (state = initialState, action) => {
+var BannersReducer = (state = initialState, action) => {
     let {type,payload} = action
 
     switch (type) {
-        case "ADD_PRODUCT":
+        case "ADD_BANNER":
             return payload;
-        case "REMOVE_PRODUCT":
+        case "REMOVE_BANNER":
             return payload;
-        case "SET_PRODUCTS":
+        case "SET_BANNERS":
             return payload;
-        case "EDIT_PRODUCT":
+        case "EDIT_BANNER":
             return payload;
         default:
             return state;
@@ -18,8 +18,4 @@ var ProductsReducer = (state = initialState, action) => {
 };
   
 
-export default ProductsReducer
-
-
-
-
+export default BannersReducer

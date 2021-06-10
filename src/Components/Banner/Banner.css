@@ -46,6 +46,7 @@
 }
 
 .banner-link-style{
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 1.2rem;
@@ -56,4 +57,8 @@
     width: 4rem;
     height: 4rem;
     border-radius: 1rem;
+}
+
+.banner-btn-style:hover{
+    cursor: pointer;
 }
