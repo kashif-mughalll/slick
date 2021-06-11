@@ -19,9 +19,11 @@ var ProductsContainer = ({ShowModal})=> {
                 <button className="manager-top-add-btn" onClick={ ()=>ShowModal(ProductModal) } >+ Add New</button>
             </div>
             <ProductHeader/>
-            <div className="manager-bottom" style={{height: "calc(100vh - 29.5rem)"}}>                
+            <div className="manager-bottom" >                
                 <ProductManager/>               
             </div>
+
+            {/* style={{height: "calc(100vh - 29.5rem)"}} */}
         </div>
     )
 }

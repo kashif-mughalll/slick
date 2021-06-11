@@ -6,7 +6,7 @@ import ManagementPage from '../../Pages/ManagementPage/ManagementPage'
 
 var Container2 = ()=> {
     return (
-        <div className="container2">
+        <div className="container2" onClick={()=>  document.getElementById("side-bar-id1").style.left = '-29rem' }>
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/management" component={ManagementPage} />

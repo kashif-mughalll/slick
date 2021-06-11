@@ -45,11 +45,16 @@ html{
 }
 
 .side-bar{
-  width: 25.6rem;
+  width: 26rem;
   height: 100vh;
   display: grid;
   grid-template-rows: 13rem 1fr 26rem;
-  background-color: white;    
+  background-color: white; 
+  transition: all 0.5s;   
+}
+
+.back-btn-wrapper{
+  display: none;
 }
 
 .main-logo{
@@ -66,7 +71,7 @@ html{
 }
 
 .side-bar-btn-style-p{
-  font: normal normal normal 14px/21px Poppins;
+  font: normal normal normal 1.4rem/2.1rem Poppins;
   letter-spacing: 0px;
   color: #8A8FA1;
   background: transparent;
@@ -92,7 +97,9 @@ html{
 }
 
 
-
+.navbar{
+  display: none;
+}
 
 
 .side-bar-img-style{
@@ -119,4 +126,6 @@ html{
   background-position: center;
   background-size: 100% 100%;
 }
+
+
 

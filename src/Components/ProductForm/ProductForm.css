@@ -51,6 +51,12 @@
     color: white;
     font-weight: 400;
     background-color: #6F8AE8;
+    transition: all 0.25s;
+}
+
+.save-btn-product-form:hover{
+    cursor: pointer;
+    background-color: #4869df;
 }
 
 .product-form-close-btn{

@@ -7,6 +7,7 @@ import ProductModal from './../../Modal/ProductModal/ProductModal'
 import ProductForm from '../../Components/ProductForm/ProductForm'
 import Delete from '../../Modal/DeleteProductModal/DeleteProductModal'
 import ModelForm from '../../Components/ModelForm/ModelForm'
+import AuthModal from '../../Modal/AuthModal/AuthModal'
 
 
 var TestPage = ({ShowModal,SetProducts})=> {
@@ -15,10 +16,7 @@ var TestPage = ({ShowModal,SetProducts})=> {
     return (
         <div className="">
 
-            {/* <ProductForm update={true} imageURL="url" category="60c09d4a1ea0d13bd732b73a" price="500" productName="shirt" _id="blabla123" saveBtnHandler={()=>{}}/> */}
-            {/* <ProductForm saveBtnHandler={()=>{}} /> */}
-
-            {/* <ModelForm saveBtnHandler={func1} link="https" _id={1221}/> */}
+            <AuthModal/>
         </div>
     )
 }

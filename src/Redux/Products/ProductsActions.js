@@ -2,8 +2,12 @@ import axios from 'axios';
 
 
 export var AddProduct = (product) => async (dispatch,getState) => {
+    var auth = getState().Auth;
     try
     {
+        if(auth){
+            product.user = auth;
+        }
         let response = await axios.post('https://internship-slick-api.herokuapp.com/api/products', product)
         let newState = [...getState().products];
         newState.push(response.data.data);   
@@ -38,10 +42,13 @@ export var RemoveProduct = (_id) => async (dispatch,getState) => {
 };
 
 
-export var SetProducts = () => async (dispatch) => {
+export var SetProducts = () => async (dispatch,getState) => {
+    var auth = getState().Auth;
+    var products;
     try {
         console.log("Fetch all products from server")
-        var products = await axios.get("https://internship-slick-api.herokuapp.com/api/products")
+        if (auth) products = await axios.get("https://internship-slick-api.herokuapp.com/api/products?user="+auth)
+        else products = await axios.get("https://internship-slick-api.herokuapp.com/api/products")
         dispatch({
             type: 'SET_PRODUCTS',
             payload : products.data.data

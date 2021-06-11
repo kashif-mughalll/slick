@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import {ShowModal} from '../../Redux/Modal/ModalActions'
 import EditProductModal from '../../Modal/EditProductModal/EditProductModal'
 import DeleteModal from '../../Modal/DeleteProductModal/DeleteProductModal'
+import '../../MediaQueries/Media.css'
 
 var Product = ({productImage,category,productName,amount,_id,categoryID,ShowModal})=> {
     let product = {

@@ -2,6 +2,7 @@ import './HomePage.css'
 import React from 'react'
 import ProductsContainer from '../../Components/ProductsContainer/ProductsContainer'
 import NotificationBtn from '../../Components/NotificationBtn/NotificationBtn'
+import Slider from '../../Components/Slider/Slider'
 
 var HomePage = ()=> {
     return (
@@ -14,9 +15,10 @@ var HomePage = ()=> {
                 <NotificationBtn/>
             </div>
 
-            <div className="carousel">
+            {/* <div className="carousel">
                 
-            </div>
+            </div> */}
+            <Slider/>
 
             <h3 className="home-page-medium-heading add-margin">Listed Products</h3>
             <ProductsContainer/>

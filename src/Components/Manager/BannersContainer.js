@@ -16,9 +16,11 @@ var BannersContainer = ({ShowModal})=> {
                 </div>
                 <button className="manager-top-add-btn" onClick={()=> ShowModal(AddBannerModal)} >+ Add New</button>
             </div>
-            <div className="manager-bottom" style={{height: "calc(100vh - 26.5rem)"}}>                
+            <div className="manager-bottom" >                
                 <BannerManager/>               
             </div>
+
+            {/* style={{height: "calc(100vh - 26.5rem)"}} */}
         </div>
     )
 }

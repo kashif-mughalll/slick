@@ -1,0 +1,19 @@
+.hover-class1{
+    font-size: 3rem;
+    padding: 2rem 4rem;
+    background: #6F8AE8;
+    color: white;
+}
+
+.hover-class1:hover{
+    color: rgb(129, 169, 255);
+    cursor: pointer;
+}
+
+.hover-class2{
+    font-size: 3rem;
+    padding: 2rem 3rem;
+    color: #6F8AE8;
+    background: white;
+
+}

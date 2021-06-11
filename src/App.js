@@ -7,20 +7,24 @@ import { connect } from 'react-redux';
 import { useEffect } from 'react';
 import {SetProducts} from './Redux/Products/ProductsActions'
 import {SetBanners} from './Redux/Banners/BannersActions'
+import Navbar from './Components/Navbar/Navbar';
+import {SetUser} from './Redux/Auth/authActions'
 
 
-var App = ({modal,SetProducts,SetBanners})=> {
+var App = ({modal,SetProducts,SetBanners,SetUser})=> {
 
   useEffect(() => {
     //CDM
-    
-    SetProducts();
-    SetBanners();
+    var uid = localStorage.getItem('uid');
+    if(uid) SetUser(uid);
+    try {SetProducts()} catch(error) {console.error(error+"new");}
+    SetBanners(uid);
   }, [])
 
   return (
     <div className="container">
       {modal.active ? <Modal/> : null}
+      <Navbar/>
       <SideBar/>
       <Container2/>
       {/* <TestPage/> */}
@@ -36,7 +40,8 @@ var mapState = (state) => {
 
 var actions = {
   SetProducts,
-  SetBanners
+  SetBanners,
+  SetUser
 }
 
 export default connect(mapState,actions)(App);

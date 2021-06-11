@@ -1,8 +1,10 @@
 import axios from 'axios'
 
 export var AddBanner = (banner) => async (dispatch,getState) => {
+    var auth = getState().Auth;
     try
     {
+        if(auth) banner.user = auth;
         let response = await axios.post('https://internship-slick-api.herokuapp.com/api/banners', banner);
         console.log("Banner created on server successfully",response.status);
         let newState = [...getState().banners];
@@ -56,10 +58,14 @@ export var RemoveBanner = (_id) => async (dispatch,getState) => {
 };
 
 
-export var SetBanners = () => async (dispatch) => {
+export var SetBanners = () => async (dispatch,getState) => {
+    
+    var auth = getState().Auth;
+    var response;
     try
     {
-        let response = await axios.get('https://internship-slick-api.herokuapp.com/api/banners');
+        if(auth) response = await axios.get('https://internship-slick-api.herokuapp.com/api/banners?user='+auth);
+        else response = await axios.get('https://internship-slick-api.herokuapp.com/api/banners');
         console.log("Fetching all banners from server ",response.status)             
         dispatch({
             type: 'SET_BANNERS',
