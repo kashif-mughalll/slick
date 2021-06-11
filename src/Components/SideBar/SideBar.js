@@ -20,10 +20,10 @@ var SideBar = ({ShowModal}) => {
             </div>
 
             <div className="btns-container">
-                <Link to="/"> <SideBarBtn title="Home" image={Home} /> </Link>
+                <Link to="/slick"> <SideBarBtn title="Home" image={Home} /> </Link>
                 <SideBarBtn title="Analytics" image={Analytics} />
                 <SideBarBtn title="Products" image={Products} />
-                <Link to="/management/managebanners"> <SideBarBtn title="Management" image={Management} /> </Link>
+                <Link to="/slick/management/managebanners"> <SideBarBtn title="Management" image={Management} /> </Link>
             </div>
 
             <div className="flex">

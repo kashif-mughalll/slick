@@ -12,8 +12,8 @@ var ProductsContainer = ({ShowModal})=> {
         <div>            
             <div className="manager-top">
                 <div className="flex div32">
-                    <Link to="/management/managebanners"> <button className="manager-top-btn">Manage Banners</button> </Link>
-                    <Link to="/management/manageproducts"> <button className="manager-top-btn changed-div">Manage Products</button> </Link>
+                    <Link to="/slick/management/managebanners"> <button className="manager-top-btn">Manage Banners</button> </Link>
+                    <Link to="/slick/management/manageproducts"> <button className="manager-top-btn changed-div">Manage Products</button> </Link>
                     <div className="sliderrr-bar"></div>
                 </div>
                 <button className="manager-top-add-btn" onClick={ ()=>ShowModal(ProductModal) } >+ Add New</button>

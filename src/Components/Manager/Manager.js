@@ -8,8 +8,8 @@ var Manager = (props)=> {
     return (
         <div className="manager">
             <Switch>
-                <Route default path="/management/managebanners" component={BannerView} />
-                <Route path="/management/manageproducts" component={ProductView} />
+                <Route default path="/slick/management/managebanners" component={BannerView} />
+                <Route path="/slick/management/manageproducts" component={ProductView} />
             </Switch>
         </div>
     )
